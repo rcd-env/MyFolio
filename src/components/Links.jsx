@@ -30,21 +30,24 @@ function Links() {
   ];
 
   return (
-    <div className="w-full p-4 flex gap-4 justify-around items-center border rounded-lg cursor-grab">
-      {links.map((link) => (
-        <div key={link.name} className="relative group">
-          <a href={link.url} className="cursor-pointer">
-            <img
-              src={link.logo}
-              alt={`${link.name} logo`}
-              className="h-12 w-12 rounded-lg"
-            />
-            <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
-              {link.name}
-            </span>
-          </a>
-        </div>
-      ))}
+    <div className="w-full justify-around items-center cursor-grab">
+      <p className="text-2xl font-semibold mb-2">Links.</p>
+      <div className="flex gap-3">
+        {links.map((link) => (
+          <div key={link.name} className="relative group">
+            <a href={link.url} className="cursor-pointer">
+              <img
+                src={link.logo}
+                alt={`${link.name} logo`}
+                className="h-10 w-10 rounded-lg"
+              />
+              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                {link.name}
+              </span>
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
