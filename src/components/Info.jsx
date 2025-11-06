@@ -25,7 +25,7 @@ function Info() {
   });
 
   return (
-    <div className="w-1/3 p-4 border rounded-md flex flex-col gap-2">
+    <div className="w-1/3 p-4 border rounded-md flex flex-col gap-2 cursor-grab">
       <div className="flex gap-2">
         <img
           src="/images/hokage.jpeg"
@@ -34,8 +34,8 @@ function Info() {
         />
         <div className="flex flex-col">
           <h1 className="text-xl font-semibold ml-2">Rakesh D.</h1>
-          <p className="text-sm mt-1 -ml-2 flex items-center justify-center">
-            <MapPin /> 127.0.0.1
+          <p className="text-sm mt-1 -ml-3 flex gap-1 items-center justify-center">
+            <MapPin size={20} /> 127.0.0.1
           </p>
         </div>
       </div>

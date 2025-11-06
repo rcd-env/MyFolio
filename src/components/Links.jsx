@@ -1,7 +1,52 @@
 import React from "react";
 
 function Links() {
-  return <div>Links</div>;
+  const links = [
+    {
+      name: "GitHub",
+      url: "https://github.com/rcd-env",
+      logo: "/images/github-logo.svg",
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/rcd_env",
+      logo: "/images/x-logo.jpeg",
+    },
+    {
+      name: "Gmail",
+      url: "mailto:donerakesh001@gmail.com",
+      logo: "/images/gmail-logo.svg",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/rakesh-das001",
+      logo: "/images/linkedin-logo.png",
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/919874660384",
+      logo: "/images/whatsapp-logo.png",
+    },
+  ];
+
+  return (
+    <div className="w-1/3 p-4 flex gap-4 justify-around border rounded-lg cursor-grab">
+      {links.map((link) => (
+        <div key={link.name} className="relative group">
+          <a href={link.url} className="cursor-pointer">
+            <img
+              src={link.logo}
+              alt={`${link.name} logo`}
+              className="h-12 w-12 rounded-lg"
+            />
+            <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+              {link.name}
+            </span>
+          </a>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Links;
