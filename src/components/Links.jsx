@@ -30,7 +30,7 @@ function Links() {
   ];
 
   return (
-    <div className="w-1/3 p-4 flex gap-4 justify-around border rounded-lg cursor-grab">
+    <div className="w-full p-4 flex gap-4 justify-around items-center border rounded-lg cursor-grab">
       {links.map((link) => (
         <div key={link.name} className="relative group">
           <a href={link.url} className="cursor-pointer">

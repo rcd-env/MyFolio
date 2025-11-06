@@ -4,11 +4,7 @@ import Links from "./components/Links";
 import Projects from "./components/Projects";
 
 function App() {
-  return (
-    <div className="p-10 flex gap-16">
-      <Links />
-    </div>
-  );
+  return <Projects />;
 }
 
 export default App;
