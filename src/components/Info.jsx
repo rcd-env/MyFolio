@@ -32,9 +32,9 @@ function Info() {
           alt="Rks D."
           className="h-16 w-16 rounded-2xl"
         />
-        <div className="flex flex-col ">
-          <h1 className="font-semibold ml-1">Rakesh D.</h1>
-          <p className="mt-1 flex items-center justify-center">
+        <div className="flex flex-col">
+          <h1 className="text-xl font-semibold ml-2">Rakesh D.</h1>
+          <p className="text-sm mt-1 -ml-2 flex items-center justify-center">
             <MapPin /> 127.0.0.1
           </p>
         </div>
@@ -42,14 +42,14 @@ function Info() {
       <div className="mt-2">
         <p>I build.</p>
       </div>
-      <div className="flex mt-3 justify-between">
+      <div className="flex mt-3 justify-between items-center">
         <p className="w-28 text-gray-500">"How to center a div again?"</p>
         <div>
           <div className="flex gap-1 items-center">
             <div className="h-2 w-2 bg-[#00ff00] rounded-full ml-auto"></div>
             <span className="text-gray-900">Online</span>
           </div>
-          <div className="text-gray-500">
+          <div className="text-sm text-gray-500">
             {formattedTime} &bull; {formattedDate}
           </div>
         </div>
