@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import XP from "./components/XP";
 import DailyToolStack from "./components/DailyToolStack";
 import Quote from "./components/Quote";
+import GitContribution from "./components/GitContribution";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Info />
         <DailyToolStack />
         <Projects />
+        <GitContribution username={"rcd-env"} />
       </div>
       <div className="w-[20%] flex flex-col gap-4">
         <Links />

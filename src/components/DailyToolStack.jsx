@@ -6,7 +6,7 @@ function DailyToolStack() {
       <div>
         <p className="text-2xl font-semibold">DAILY</p>
         <p>TOOL</p>
-        <p className="text-2xl font-semibold">STACK.</p>
+        <p className="text-3xl font-semibold">STACK.</p>
       </div>
     </div>
   );

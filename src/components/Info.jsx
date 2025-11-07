@@ -28,7 +28,7 @@ function Info() {
     <div className="w-full p-4 border rounded-md flex flex-col gap-2 cursor-grab">
       <div className="flex gap-2">
         <img
-          src="/images/toji.jpeg"
+          src="/images/baki.jpeg"
           alt="Rks D."
           className="h-16 w-16 rounded-2xl"
         />
