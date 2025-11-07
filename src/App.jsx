@@ -18,7 +18,7 @@ function App() {
         <Projects />
         <DailyToolStack />
         <XP />
-        <GitContribution username={"rcd-env"} />
+        <GitContribution username={"torvalds"} />
         <Song />
         <Quote />
       </div>
@@ -34,15 +34,15 @@ function App() {
               <DailyToolStack />
             </div>
             <div className="flex flex-col gap-4 w-2/3">
-              <Projects />
-              <GitContribution username={"rcd-env"} />
+              <XP />
+              <GitContribution username={"torvalds"} />
               <Song />
             </div>
           </div>
         </div>
         <div className="w-[20%] flex flex-col gap-4">
           <Links />
-          <XP />
+          <Projects />
           <Quote />
         </div>
       </div>
