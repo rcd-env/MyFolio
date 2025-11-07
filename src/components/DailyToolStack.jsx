@@ -4,8 +4,9 @@ function DailyToolStack() {
   const tools = [
     { name: "VSCode", icon: "/images/vscode.svg" },
     { name: "Google Chrome", icon: "/images/chrome.svg" },
-    { name: "hiAnime", icon: "/images/hianime.png" },
     { name: "Github Copilot", icon: "/images/copilot.png" },
+    { name: "Youtube", icon: "/images/youtube.png" },
+    { name: "hiAnime", icon: "/images/hianime.png" },
     { name: "Spotify", icon: "/images/spotify.svg" },
   ];
   return (
