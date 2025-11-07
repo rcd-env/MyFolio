@@ -30,9 +30,9 @@ function Links() {
   ];
 
   return (
-    <div className="w-full justify-around items-center cursor-grab">
-      <p className="text-2xl font-semibold mb-2">Links.</p>
-      <div className="flex gap-3">
+    <div className="w-full justify-around items-center">
+      <p className="text-3xl font-semibold mb-2 hidden md:block">Links.</p>
+      <div className="flex justify-evenly md:justify-between items-center">
         {links.map((link) => (
           <div key={link.name} className="relative group">
             <a href={link.url} className="cursor-pointer">

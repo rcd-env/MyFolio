@@ -33,8 +33,8 @@ function Info() {
           className="h-16 w-16 rounded-2xl"
         />
         <div className="flex flex-col">
-          <h1 className="text-xl font-semibold ml-2">Rakesh D.</h1>
-          <p className="text-sm mt-0.5 ml-2 flex gap-1 items-center justify-center">
+          <h1 className="text-xl font-semibold ml-2 name">Rakesh D.</h1>
+          <p className="text-sm font-mono mt-0.5 ml-2 flex gap-1 items-center justify-center">
             127.0.0.1 &bull; India
           </p>
         </div>
@@ -43,13 +43,15 @@ function Info() {
         <p>I build.</p>
       </div>
       <div className="flex mt-3 justify-between items-center leading-5">
-        <p className="w-28 text-gray-500">"How to center a div again?"</p>
+        <p className="text-gray-500">
+          "How to center <br />a div again?"
+        </p>
         <div>
           <div className="flex gap-1 items-center">
             <div className="h-2 w-2 bg-[#00ff00] rounded-full ml-auto"></div>
-            <span className="text-gray-900">Up for work.</span>
+            <span className="text-gray-900">Online</span>
           </div>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm font-mono text-gray-500">
             {formattedTime} &bull; {formattedDate}
           </div>
         </div>

@@ -64,9 +64,10 @@ const GitContribution = ({ username }) => {
   const monthLabels = getMonthLabels(weeks);
 
   return (
-    <div className="w-full p-4 border rounded-lg">
-      <h2 className="text-lg font-semibold mb-3">
-        Times I didn't touch grass ({calendar.totalContributions})
+    <div className="w-full p-4 border rounded-lg cursor-grab">
+      <h2 className="text-md font-semibold mb-3">
+        Touch some grass
+        {/* ({calendar.totalContributions}) */}
       </h2>
 
       <div className="overflow-x-auto">
@@ -108,7 +109,7 @@ const GitContribution = ({ username }) => {
       </div>
 
       {/* Legend - Outside scrollable area */}
-      <div className="flex ml-8 mt-2 text-xs items-center">
+      <div className="flex mt-2 text-xs items-center">
         <span className="mr-1">Less</span>
         {[...Array(5)].map((_, i) => (
           <div
