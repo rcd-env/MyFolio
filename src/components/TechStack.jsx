@@ -37,7 +37,7 @@ function TechStack() {
           <h2 className="text-xl font-semibold mb-2">Frontend</h2>
           <div className="flex flex-wrap">
             {frontend.map((tech) => (
-              <div key={tech} className="mr-2">
+              <div key={tech} className="mr-3">
                 {tech}
               </div>
             ))}
@@ -49,7 +49,7 @@ function TechStack() {
           <h2 className="text-xl font-semibold mb-2">Backend</h2>
           <div className="flex flex-wrap">
             {backend.map((tech) => (
-              <div key={tech} className="mr-2">
+              <div key={tech} className="mr-3">
                 {tech}
               </div>
             ))}
@@ -61,7 +61,7 @@ function TechStack() {
           <h2 className="text-xl font-semibold mb-2">Database</h2>
           <div className="flex flex-wrap">
             {database.map((tech) => (
-              <div key={tech} className="mr-2">
+              <div key={tech} className="mr-3">
                 {tech}
               </div>
             ))}
@@ -73,7 +73,7 @@ function TechStack() {
           <h2 className="text-xl font-semibold mb-2">Languages</h2>
           <div className="flex flex-wrap">
             {language.map((tech) => (
-              <div key={tech} className="mr-2">
+              <div key={tech} className="mr-3">
                 {tech}
               </div>
             ))}
@@ -85,7 +85,7 @@ function TechStack() {
           <h2 className="text-xl font-semibold mb-2">Extras</h2>
           <div className="flex flex-wrap">
             {extra.map((tech) => (
-              <div key={tech} className="mr-2">
+              <div key={tech} className="mr-3">
                 {tech}
               </div>
             ))}

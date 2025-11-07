@@ -1,5 +1,5 @@
 import Info from "./components/Info";
-import TechStack from "./components/TechSTack";
+import TechStack from "./components/TechStack";
 import Links from "./components/Links";
 import Projects from "./components/Projects";
 import XP from "./components/XP";
@@ -11,7 +11,6 @@ import Song from "./components/Song";
 function App() {
   return (
     <div className="p-4 md:p-10">
-      {/* Mobile & Tablet Layout (< lg) - Single column in specific order */}
       <div className="lg:hidden flex flex-col gap-4 max-w-2xl mx-auto">
         <Info />
         <Links />
@@ -24,7 +23,6 @@ function App() {
         <Quote />
       </div>
 
-      {/* Desktop Layout (>= lg) - Original 3-column layout */}
       <div className="hidden lg:flex justify-center gap-4">
         <div className="w-[20%]">
           <TechStack />
