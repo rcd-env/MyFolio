@@ -5,17 +5,17 @@ function Links() {
     {
       name: "GitHub",
       url: "https://github.com/rcd-env",
-      logo: "/images/github-logo.svg",
+      logo: "/images/github.png",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/rcd_env",
-      logo: "/images/x-logo.jpeg",
+      logo: "/images/twitter.png",
     },
     {
       name: "Gmail",
       url: "mailto:donerakesh001@gmail.com",
-      logo: "/images/gmail-logo.svg",
+      logo: "/images/gmail.png",
     },
     {
       name: "LinkedIn",

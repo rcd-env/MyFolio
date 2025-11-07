@@ -2,12 +2,12 @@ import React from "react";
 
 function DailyToolStack() {
   const tools = [
-    { name: "VSCode", icon: "/images/vscode.svg" },
+    { name: "VSCode", icon: "/images/code.png" },
     { name: "Google Chrome", icon: "/images/chrome.svg" },
     { name: "Github Copilot", icon: "/images/copilot.png" },
     { name: "Youtube", icon: "/images/youtube.png" },
     { name: "hiAnime", icon: "/images/hianime.png" },
-    { name: "Spotify", icon: "/images/spotify.svg" },
+    { name: "Spotify", icon: "/images/spotify.png" },
   ];
   return (
     <div className="h-full p-4 border rounded-lg flex flex-col gap-2 cursor-grab">
@@ -16,7 +16,7 @@ function DailyToolStack() {
         <p>TOOL</p>
         <p className="text-3xl font-bold">STACK.</p>
       </div>
-      <div className="h-full flex sm:flex-col gap-4 justify-evenly">
+      <div className="h-full flex md:flex-col gap-4 justify-evenly">
         {tools.map((tool, index) => (
           <div key={tool.name} className="relative group">
             <img
