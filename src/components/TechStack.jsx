@@ -29,7 +29,8 @@ function TechStack() {
   return (
     <div className="h-full p-6 border rounded-lg cursor-grab">
       <div className="flex gap-4 mb-4 text-7xl items-center">
-        <Braces size={54} /> <span className="text-3xl">Arsenal</span>
+        <Braces size={54} />{" "}
+        <span className="text-2xl md:text-3xl">Arsenal</span>
       </div>
       <hr />
       {frontend.length > 0 && (
