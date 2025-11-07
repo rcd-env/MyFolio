@@ -20,12 +20,12 @@ function Links() {
     {
       name: "LinkedIn",
       url: "https://linkedin.com/in/rakesh-das001",
-      logo: "/images/linkedin-logo.png",
+      logo: "/images/linkedin.png",
     },
     {
       name: "WhatsApp",
       url: "https://wa.me/919874660384",
-      logo: "/images/whatsapp-logo.png",
+      logo: "/images/whatsapp.png",
     },
   ];
 
