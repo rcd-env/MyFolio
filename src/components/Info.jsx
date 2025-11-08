@@ -30,7 +30,7 @@ function Info() {
         <img
           src="/images/shawn.jpg"
           alt="Rks D."
-          className="h-16 w-16 rounded-2xl"
+          className="h-16 w-16 rounded-lg"
         />
         <div className="flex flex-col">
           <h1 className="text-xl font-semibold ml-2 name tracking-wide">
