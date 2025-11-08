@@ -26,30 +26,33 @@ function Info() {
 
   return (
     <div className="w-full p-4 border rounded-md flex flex-col gap-2 cursor-grab">
-      <div className="flex gap-2">
+      <div className="flex gap-2 items-center">
         <img
-          src="/images/baki.jpeg"
+          src="/images/shawn.jpg"
           alt="Rks D."
           className="h-16 w-16 rounded-2xl"
         />
         <div className="flex flex-col">
-          <h1 className="text-xl font-semibold ml-2 name">Rakesh D.</h1>
-          <p className="text-sm font-mono mt-0.5 ml-2 flex gap-1 items-center justify-center">
+          <h1 className="text-xl font-semibold ml-2 name tracking-wide">
+            Rakesh D.
+          </h1>
+          <p className="text-sm font-mono mt-0.5 ml-2 flex gap-1 items-center justify-center tracking-wider">
             127.0.0.1 &bull; India
           </p>
         </div>
       </div>
       <div className="mt-2">
-        <p>I build.</p>
+        <p className="font-semibold">I build.</p>
+        <p className="text-sm">oh and i speak fluent json and sarcasm btw.</p>
       </div>
       <div className="flex mt-3 justify-between items-center leading-5">
         <p className="text-gray-500">
-          "How to center <br />a div again?"
+          “How to center <br />a div again?”
         </p>
         <div>
           <div className="flex gap-1 items-center">
             <div className="h-2 w-2 bg-[#00ff00] rounded-full ml-auto"></div>
-            <span className="text-gray-900">Online</span>
+            <span className="text-gray-900">open to work</span>
           </div>
           <div className="text-sm font-mono text-gray-500">
             {formattedTime} &bull; {formattedDate}
