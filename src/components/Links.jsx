@@ -39,7 +39,11 @@ function Links() {
               <img
                 src={link.logo}
                 alt={`${link.name} logo`}
-                className="h-10 w-10 rounded-lg"
+                className={`rounded-lg ${
+                  link.name === "Gmail" || link.name === "Gmail"
+                    ? "h-9 w-9"
+                    : "h-10 w-10"
+                }`}
               />
               <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
                 {link.name}
