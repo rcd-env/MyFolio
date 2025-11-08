@@ -18,7 +18,7 @@ function App() {
         <Projects />
         <DailyToolStack />
         <XP />
-        <GitContribution username={"torvalds"} />
+        <GitContribution />
         <Song />
         <Quote />
       </div>
@@ -35,7 +35,7 @@ function App() {
             </div>
             <div className="flex flex-col gap-4 w-2/3">
               <XP />
-              <GitContribution username={"torvalds"} />
+              <GitContribution />
               <Song />
             </div>
           </div>
@@ -47,7 +47,9 @@ function App() {
         </div>
       </div>
       <hr className="my-4 md:hidden" />
-      <p className="text-end font-mono text-md md:hidden">Peace out.</p>
+      <p className="pr-2 mb-2 text-end font-mono text-md md:hidden">
+        peace out.
+      </p>
     </div>
   );
 }
