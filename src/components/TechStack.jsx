@@ -40,7 +40,7 @@ function TechStack() {
             {frontend.map((tech) => (
               <div
                 key={tech}
-                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full"
+                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full hover:bg-gray-200"
               >
                 {tech}
               </div>
@@ -55,7 +55,7 @@ function TechStack() {
             {backend.map((tech) => (
               <div
                 key={tech}
-                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full"
+                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full hover:bg-gray-200"
               >
                 {tech}
               </div>
@@ -70,7 +70,7 @@ function TechStack() {
             {database.map((tech) => (
               <div
                 key={tech}
-                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full"
+                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full hover:bg-gray-200"
               >
                 {tech}
               </div>
@@ -85,7 +85,7 @@ function TechStack() {
             {language.map((tech) => (
               <div
                 key={tech}
-                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full"
+                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full hover:bg-gray-200"
               >
                 {tech}
               </div>
@@ -100,7 +100,7 @@ function TechStack() {
             {extra.map((tech) => (
               <div
                 key={tech}
-                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full"
+                className="text-xs mr-2 mb-1 py-1 px-2 border rounded-full hover:bg-gray-200"
               >
                 {tech}
               </div>
