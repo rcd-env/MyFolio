@@ -49,7 +49,7 @@ function DailyToolStack() {
         </div>
         <div className="h-full w-1/2">
           <img
-            src="/images/waves.jpg"
+            src="/images/white-waves.jpg"
             alt="drago"
             className="h-full w-full rounded-lg object-cover"
           />
