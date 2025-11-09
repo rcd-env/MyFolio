@@ -16,7 +16,7 @@ function DailyToolStack() {
         <p>TOOL</p>
         <p className="text-3xl font-bold">STACK.</p>
       </div>
-      <div className="h-full flex md:flex-col gap-4 justify-evenly mt-1 md:mt-0">
+      <div className="h-full w-full flex md:hidden gap-4 justify-evenly mt-1 md:mt-0">
         {tools.map((tool, index) => (
           <div key={tool.name} className="relative group">
             <img
@@ -30,6 +30,30 @@ function DailyToolStack() {
             </span>
           </div>
         ))}
+      </div>
+      <div className="h-full justify-around hidden md:flex">
+        <div className="h-full w-1/2 flex md:flex-col gap-4 justify-evenly mt-1 md:mt-0">
+          {tools.map((tool, index) => (
+            <div key={tool.name} className="relative group">
+              <img
+                id={index}
+                src={tool.icon}
+                alt={`${tool.name} logo`}
+                className="h-10 w-10 rounded-lg"
+              />
+              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                {tool.name}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="h-full w-1/2">
+          <img
+            src="/images/waves.jpg"
+            alt="drago"
+            className="h-full w-full rounded-lg object-cover"
+          />
+        </div>
       </div>
     </div>
   );
