@@ -27,7 +27,7 @@ function TechStack() {
   const extra = ["Git", "GitHub", "Docker", "Kubernetes"];
 
   return (
-    <div className="h-full p-6 border border-gray-500 rounded-lg cursor-grab">
+    <div className="h-full p-6 border border-gray-500 rounded-lg bg-white cursor-grab">
       <div className="flex gap-4 mb-2 text-7xl items-center">
         <Braces size={54} />{" "}
         <span className="text-2xl font-bold tracking-widest">Arsenal</span>

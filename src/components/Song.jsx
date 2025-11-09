@@ -55,7 +55,7 @@ function Song() {
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-full p-2 border border-gray-500 rounded-lg cursor-grab">
+    <div className="w-full p-2 border border-gray-500 rounded-lg bg-white cursor-grab">
       <audio ref={audioRef} src={audioSrc} />
 
       <div className="flex items-center gap-3">

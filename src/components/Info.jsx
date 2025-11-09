@@ -25,7 +25,7 @@ function Info() {
   });
 
   return (
-    <div className="w-full p-4 border border-gray-500 rounded-md flex flex-col gap-2 cursor-grab">
+    <div className="w-full p-4 border border-gray-500 rounded-md bg-white flex flex-col gap-2 cursor-grab">
       <div className="flex gap-2 items-center">
         <img
           src="/images/shawn.jpg"
@@ -40,6 +40,7 @@ function Info() {
             127.0.0.1 &bull; India
           </p>
         </div>
+        <img src="/images/dark.png" alt="" className="h-8 w-12 ml-auto" />
       </div>
       <div className="mt-2">
         <p className="font-semibold">I build.</p>

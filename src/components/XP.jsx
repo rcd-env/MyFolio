@@ -47,7 +47,7 @@ function XP() {
     //     </div>
     //   ))}
     // </div>
-    <div className="h-40 border border-gray-500 rounded-lg flex items-center justify-center cursor-grab">
+    <div className="h-40 border border-gray-500 rounded-lg bg-white flex items-center justify-center cursor-grab">
       aura coming soon...
     </div>
   );

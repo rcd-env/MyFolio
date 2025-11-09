@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <div className="px-4 py-4 md:py-5 md:px-10 ">
+    <div className="px-4 py-4 md:py-5 md:px-10 main">
       <div
         className={`lg:hidden flex flex-col gap-4 max-w-2xl mx-auto animate-on-load ${
           isLoaded ? "animate-fade-in" : ""

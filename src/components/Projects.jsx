@@ -84,7 +84,7 @@ const Projects = () => {
   }, [hintTimer]);
 
   return (
-    <div className="p-4 md:p-2 border border-gray-500 rounded-lg cursor-grab">
+    <div className="p-4 md:p-2 border border-gray-500 rounded-lg bg-white cursor-grab">
       <Swiper
         modules={[]}
         loop={true}

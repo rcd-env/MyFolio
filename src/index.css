@@ -3,7 +3,10 @@
 * {
   font-family: "Space Grotesk", sans-serif;
 }
-
+/* .main {
+  background-image: url("../public/images/bg.jpeg");
+  background-size: cover;
+} */
 /* Animation keyframes */
 @keyframes slideInLeft {
   from {
