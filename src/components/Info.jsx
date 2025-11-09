@@ -48,7 +48,7 @@ function Info() {
       </div>
       <div className="flex mt-3 justify-between items-center leading-5">
         <p className="text-gray-500">
-          “How to center <br />a div again?”
+          “How to center <br />a div again??”
         </p>
         <div>
           <div className="flex gap-1 items-center">
