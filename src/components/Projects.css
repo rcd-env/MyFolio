@@ -8,8 +8,8 @@
 /* Swipe hint positioned in the center */
 .swipe-hint {
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 57%;
+  left: 80%;
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: 500;
@@ -65,10 +65,27 @@
 .horizontal-swiper {
   display: none;
   cursor: grab;
+  height: 100%;
 }
 
 .horizontal-swiper:active {
   cursor: grabbing;
+}
+
+.horizontal-swiper .swiper-wrapper {
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.horizontal-swiper .swiper-slide {
+  height: 100%;
+  display: flex !important;
+}
+
+.horizontal-swiper .swiper-slide > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Show horizontal swiper on desktop */
@@ -76,13 +93,18 @@
   .horizontal-swiper {
     display: block !important;
   }
+
+  /* Override the generic swiper-slide height rule for horizontal swiper */
+  .horizontal-swiper .swiper-slide {
+    height: 100% !important;
+  }
 }
 
 .mySwiper .swiper-wrapper {
   height: auto;
 }
 
-.mySwiper .swiper-slide {
+.vertical-swiper .swiper-slide {
   height: auto;
   display: flex;
   align-items: stretch;

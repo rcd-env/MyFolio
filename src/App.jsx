@@ -43,6 +43,11 @@ function App() {
         <div className="w-[20%] flex flex-col gap-4">
           <Links />
           <Projects />
+          <img
+            src="/images/white-waves.jpg"
+            alt=""
+            className="h-2 w-full object-cover rounded-lg"
+          />
           <Quote />
         </div>
       </div>
