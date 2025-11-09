@@ -9,7 +9,6 @@ const Projects = () => {
       image: "/images/earno.png",
       githubLink: "https://github.com/rcd-env/earno",
       demoLink: "https://earno-celo.vercel.app/",
-      // tags: ["React.js", "Tailwind CSS", "CELO"],
     },
     {
       title: "RoomGo",
@@ -17,34 +16,42 @@ const Projects = () => {
       image: "/images/roomgo.png",
       githubLink: "https://github.com/rcd-env/roomgo",
       demoLink: "https://roomgo.onrender.com/",
-      // tags: ["Node.js", "Express.js", "MongoDB", "BootStrap", "EJS"],
+    },
+    {
+      title: "Zuno",
+      description:
+        "A frontend clone of Zerodha built with React.js and Tailwind CSS.",
+      image: "/images/zuno.png",
+      githubLink: "https://github.com/rcd-env/zuno",
+      demoLink: "https://zuno-sand.vercel.app/",
+    },
+    {
+      title: "Foodivery",
+      description: "A full-stack food reel scrolling platform.",
+      image: "/images/foodivery.png",
+      githubLink: "https://github.com/rcd-env/foodivery",
+      demoLink: "https://lets-foodivery.vercel.app/",
     },
     {
       title: "ClimaSphere",
-      description:
-        "A sleek weather app that provides real-time weather updates based on your location or search queries.",
-      image: "/images/ClimaSphere.png",
+      description: "A sleek weather app built with HTML, CSS, and JavaScript.",
+      image: "/images/climasphere.png",
       githubLink: "https://github.com/rcd-env/climasphere",
       demoLink: "https://weather-wizard-topaz.vercel.app/",
-      // tags: ["JavaScript", "HTML", "CSS", "OpenWeather API"],
     },
     {
       title: "Simon Says Game",
-      description:
-        "A fun, interactive memory game built with JavaScript, replicating the classic 'Simon Says' gameplay.",
-      image: "/images/SimonSaysGame.png",
-      githubLink: "https://github.com/rcd-env/simon-says-game",
+      description: "A fun, interactive memory game built with JavaScript.",
+      image: "/images/simon.png",
+      githubLink: "https://github.com/rcd-env/SimonSaysGame",
       demoLink: "https://simon-says-game-murex.vercel.app/",
-      // tags: ["JavaScript", "HTML", "CSS"],
     },
     {
       title: "Line Dropper",
-      description:
-        "A content generation tool that helps creators craft perfect social media posts. Just enter a topic, tone, length, and platform — it suggests optimized titles, hashtags, and descriptions.",
-      image: "/images/LineDropper.png",
-      githubLink: "https://github.com/rcd-env/line-dropper",
+      description: "A content generation tool that helps creators craft posts",
+      image: "/images/linedropper.png",
+      githubLink: "https://github.com/rcd-env/LineDropper",
       demoLink: "https://line-dropper.vercel.app/",
-      // tags: ["Node.js", "Express.js", "OpenAI API", "HTML", "CSS"],
     },
   ];
 
