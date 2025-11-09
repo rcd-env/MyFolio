@@ -70,7 +70,7 @@ const Projects = () => {
 
     const timer = setTimeout(() => {
       setShowHint(true);
-    }, 8000);
+    }, 4000);
 
     setHintTimer(timer);
   };
