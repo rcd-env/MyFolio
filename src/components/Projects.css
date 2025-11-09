@@ -1,0 +1,108 @@
+/* Swiper Container Size Control */
+.mySwiper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* Swipe hint positioned in the center */
+.swipe-hint {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  pointer-events: none;
+  animation: fadeInOut 2s ease-in-out infinite;
+  padding: 12px 24px;
+  border-radius: 8px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Fade in/out animation for swipe indicators */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Vertical Swiper for Mobile - Set height based on content */
+.vertical-swiper {
+  height: 500px;
+  display: block;
+  cursor: grab;
+}
+
+.vertical-swiper:active {
+  cursor: grabbing;
+}
+
+/* Adjust for smaller mobile screens */
+@media (max-width: 480px) {
+  .vertical-swiper {
+    height: 21rem;
+  }
+}
+
+/* Hide vertical swiper on desktop */
+@media (min-width: 768px) {
+  .vertical-swiper {
+    display: none !important;
+  }
+}
+
+/* Horizontal swiper */
+.horizontal-swiper {
+  display: none;
+  cursor: grab;
+}
+
+.horizontal-swiper:active {
+  cursor: grabbing;
+}
+
+/* Show horizontal swiper on desktop */
+@media (min-width: 768px) {
+  .horizontal-swiper {
+    display: block !important;
+  }
+}
+
+.mySwiper .swiper-wrapper {
+  height: auto;
+}
+
+.mySwiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Swiper Navigation Button Styles */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: black;
+}
+
+/* Optional: Adjust button size */
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect */
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+  color: #333;
+}

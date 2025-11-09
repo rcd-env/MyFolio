@@ -10,7 +10,7 @@ import Song from "./components/Song";
 
 function App() {
   return (
-    <div className="p-4 md:p-10">
+    <div className="px-4 py-4 md:py-5 md:px-10 ">
       <div className="lg:hidden flex flex-col gap-4 max-w-2xl mx-auto">
         <Info />
         <Links />
@@ -27,7 +27,7 @@ function App() {
         <div className="w-[20%]">
           <TechStack />
         </div>
-        <div className="w-[35%] flex flex-col gap-4">
+        <div className="w-[35%] flex flex-col gap-4 justify-between">
           <Info />
           <div className="flex gap-4">
             <div className="w-1/3">

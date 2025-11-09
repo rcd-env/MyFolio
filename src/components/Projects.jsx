@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "./Projects.css";
+
 const Projects = () => {
+  const [showHint, setShowHint] = useState(true);
+  const [hintTimer, setHintTimer] = useState(null);
   const projects = [
     {
       title: "Earno",
@@ -55,47 +61,130 @@ const Projects = () => {
     },
   ];
 
+  const handleSlideChange = () => {
+    setShowHint(false);
+
+    if (hintTimer) {
+      clearTimeout(hintTimer);
+    }
+
+    const timer = setTimeout(() => {
+      setShowHint(true);
+    }, 8000);
+
+    setHintTimer(timer);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (hintTimer) {
+        clearTimeout(hintTimer);
+      }
+    };
+  }, [hintTimer]);
+
   return (
     <div className="p-4 border rounded-lg cursor-grab">
-      {/* {projects.map((project, index) => ( */}
-      <div className="flex flex-col">
-        <img
-          src={projects[0].image}
-          alt={projects[0].title}
-          className="border rounded-md mb-2"
-        />
-        <hr />
-        <div className="flex flex-col">
-          <p className="text-xl font-semibold mt-2">{projects[0].title}</p>
-          <p className="md:text-sm">{projects[0].description}</p>
-          {/* <div className="flex flex-wrap gap-2">
-            {projects[0].tags.map((tag, i) => (
-              <span key={i} className="text-xs px-2 py-1 border rounded-full">
-                {tag}
-              </span>
-            ))}
-          </div> */}
-          <div className="flex gap-4 mt-3">
-            <a
-              href={projects[0].githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
-            >
-              <Github /> GitHub
-            </a>
-            <a
-              href={projects[0].demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
-            >
-              <SquareArrowOutUpRight /> Live
-            </a>
-          </div>
-        </div>
-      </div>
-      {/* ))} */}
+      <Swiper
+        modules={[]}
+        loop={true}
+        direction={"vertical"}
+        speed={250}
+        navigation={true}
+        spaceBetween={10}
+        slidesPerView={1}
+        className="mySwiper vertical-swiper"
+        onSlideChange={handleSlideChange}
+      >
+        {showHint && <div className="swipe-hint vertical-hint">↕ Scroll</div>}
+        {projects.map((project) => (
+          <SwiperSlide key={project.title}>
+            <div className="flex flex-col h-full">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="border rounded-md mb-2"
+              />
+              <hr />
+              <div className="flex flex-col justify-between grow">
+                <div>
+                  <p className="text-xl font-semibold mt-2">{project.title}</p>
+                  <p className="md:text-sm">{project.description}</p>
+                </div>
+                <div className="flex gap-4 mt-3">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                  >
+                    <Github /> GitHub
+                  </a>
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                  >
+                    <SquareArrowOutUpRight /> Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <Swiper
+        modules={[]}
+        loop={true}
+        direction={"horizontal"}
+        navigation={true}
+        spaceBetween={30}
+        slidesPerView={1}
+        className="mySwiper horizontal-swiper"
+        onSlideChange={handleSlideChange}
+      >
+        {showHint && (
+          <div className="swipe-hint horizontal-hint">← Swipe →</div>
+        )}
+        {projects.map((project) => (
+          <SwiperSlide key={project.title}>
+            <div className="flex flex-col h-full">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="border rounded-md mb-2"
+              />
+              <hr />
+              <div className="flex flex-col justify-between grow">
+                <div>
+                  <p className="text-xl font-semibold mt-2">{project.title}</p>
+                  <p className="md:text-sm">{project.description}</p>
+                </div>
+                <div className="flex gap-4 mt-3">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                  >
+                    <Github /> GitHub
+                  </a>
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                  >
+                    <SquareArrowOutUpRight /> Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
