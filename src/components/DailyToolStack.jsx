@@ -10,7 +10,7 @@ function DailyToolStack() {
     { name: "Spotify", icon: "/images/spotify.png" },
   ];
   return (
-    <div className="h-full p-4 border rounded-lg flex flex-col gap-2 cursor-grab">
+    <div className="h-full p-4 border border-gray-500 rounded-lg flex flex-col gap-2 cursor-grab">
       <div>
         <p className="text-2xl font-bold">DAILY</p>
         <p>TOOL</p>

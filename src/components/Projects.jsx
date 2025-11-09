@@ -84,7 +84,7 @@ const Projects = () => {
   }, [hintTimer]);
 
   return (
-    <div className="p-4 md:p-2 border rounded-lg cursor-grab">
+    <div className="p-4 md:p-2 border border-gray-500 rounded-lg cursor-grab">
       <Swiper
         modules={[]}
         loop={true}
@@ -103,7 +103,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="border rounded-md mb-2"
+                className="border border-gray-500 rounded-md mb-2"
               />
               <hr />
               <div className="flex flex-col justify-between grow">
@@ -116,7 +116,7 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                    className="px-2 py-1 border border-gray-600 rounded-md flex gap-1.5 justify-around"
                   >
                     <Github /> GitHub
                   </a>
@@ -124,7 +124,7 @@ const Projects = () => {
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-1 border rounded-md flex gap-1.5 justify-around"
+                    className="px-2 py-1 border border-gray-600 rounded-md flex gap-1.5 justify-around"
                   >
                     <SquareArrowOutUpRight /> Live
                   </a>
@@ -154,7 +154,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="border rounded-md mb-3"
+                className="border border-gray-500 rounded-md mb-3"
               />
               <hr />
               <p className="text-xl font-semibold mt-2 mb-1">{project.title}</p>
@@ -164,7 +164,7 @@ const Projects = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 py-1 border rounded-md flex gap-2 justify-around"
+                  className="px-2 py-1 border border-gray-600 rounded-md flex gap-2 justify-around"
                 >
                   <Github /> GitHub
                 </a>
@@ -172,7 +172,7 @@ const Projects = () => {
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 py-1 border rounded-md flex gap-2 justify-around"
+                  className="px-2 py-1 border border-gray-600 rounded-md flex gap-2 justify-around"
                 >
                   <SquareArrowOutUpRight /> Live
                 </a>

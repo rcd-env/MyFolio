@@ -25,7 +25,7 @@ function Info() {
   });
 
   return (
-    <div className="w-full p-4 border rounded-md flex flex-col gap-2 cursor-grab">
+    <div className="w-full p-4 border border-gray-500 rounded-md flex flex-col gap-2 cursor-grab">
       <div className="flex gap-2 items-center">
         <img
           src="/images/shawn.jpg"

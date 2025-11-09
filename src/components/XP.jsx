@@ -29,7 +29,7 @@ function XP() {
   // ];
 
   return (
-    // <div className=" w-full border rounded-lg">
+    // <div className=" w-full border border-gray-400 rounded-lg">
     //   {experiences.map((exp, index) => (
     //     <div key={index} className="p-4 border-b last:border-b-0">
     //       <div className="flex items-center">
@@ -47,7 +47,7 @@ function XP() {
     //     </div>
     //   ))}
     // </div>
-    <div className="h-40 border rounded-lg flex items-center justify-center cursor-grab">
+    <div className="h-40 border border-gray-500 rounded-lg flex items-center justify-center cursor-grab">
       aura coming soon...
     </div>
   );
