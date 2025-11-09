@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Info from "./components/Info";
 import TechStack from "./components/TechStack";
 import Links from "./components/Links";
@@ -9,9 +10,47 @@ import GitContribution from "./components/GitContribution";
 import Song from "./components/Song";
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload images and wait for external content
+    const preloadContent = async () => {
+      // List of images to preload
+      const imagesToPreload = [
+        "/images/white-waves.jpg",
+        // Add any other images used in your components here
+      ];
+
+      // Preload all images
+      const imagePromises = imagesToPreload.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = resolve; // Resolve even on error to not block animation
+        });
+      });
+
+      // Wait for images to load
+      await Promise.all(imagePromises);
+
+      // Give a small delay for GitContribution and Song iframe to initialize
+      await new Promise((resolve) => setTimeout(resolve, 300));
+
+      // Trigger animations
+      setIsLoaded(true);
+    };
+
+    preloadContent();
+  }, []);
+
   return (
     <div className="px-4 py-4 md:py-5 md:px-10 ">
-      <div className="lg:hidden flex flex-col gap-4 max-w-2xl mx-auto">
+      <div
+        className={`lg:hidden flex flex-col gap-4 max-w-2xl mx-auto animate-on-load ${
+          isLoaded ? "animate-fade-in" : ""
+        }`}
+      >
         <Info />
         <Links />
         <TechStack />
@@ -24,12 +63,26 @@ function App() {
       </div>
 
       <div className="hidden lg:flex justify-center gap-4">
-        <div className="w-[20%]">
+        <div
+          className={`w-[20%] animate-on-load ${
+            isLoaded ? "animate-slide-in-left" : ""
+          }`}
+        >
           <TechStack />
         </div>
         <div className="w-[35%] flex flex-col gap-4 justify-between">
-          <Info />
-          <div className="flex gap-4">
+          <div
+            className={`animate-on-load ${
+              isLoaded ? "animate-slide-in-top" : ""
+            }`}
+          >
+            <Info />
+          </div>
+          <div
+            className={`flex gap-4 animate-on-load ${
+              isLoaded ? "animate-slide-in-bottom" : ""
+            }`}
+          >
             <div className="w-1/3">
               <DailyToolStack />
             </div>
@@ -40,7 +93,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="w-[20%] flex flex-col gap-4">
+        <div
+          className={`w-[20%] flex flex-col gap-4 animate-on-load ${
+            isLoaded ? "animate-slide-in-right" : ""
+          }`}
+        >
           <Links />
           <Projects />
           <img
