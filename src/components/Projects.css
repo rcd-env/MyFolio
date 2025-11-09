@@ -14,7 +14,7 @@
   font-size: 18px;
   font-weight: 500;
   color: white;
-  background: rgba(30, 30, 30, 0.214);
+  background: rgb(0, 0, 0, 0.5);
   z-index: 10;
   pointer-events: none;
   animation: fadeInOut 2s ease-in-out infinite;
