@@ -16,7 +16,7 @@ function DailyToolStack() {
         <p>TOOL</p>
         <p className="text-3xl font-bold">STACK.</p>
       </div>
-      <div className="h-full w-full flex md:hidden gap-4 justify-evenly mt-1 md:mt-0">
+      <div className="h-full w-full flex md:hidden gap-4 justify-between mt-1 md:mt-0">
         {tools.map((tool, index) => (
           <div key={tool.name} className="relative group">
             <img
@@ -32,7 +32,7 @@ function DailyToolStack() {
         ))}
       </div>
       <div className="h-full justify-around hidden md:flex">
-        <div className="h-full w-1/2 flex md:flex-col gap-4 justify-evenly mt-1 md:mt-0">
+        <div className="h-full w-1/2 flex md:flex-col gap-4 justify-between mt-1 md:mt-0">
           {tools.map((tool, index) => (
             <div key={tool.name} className="relative group">
               <img
