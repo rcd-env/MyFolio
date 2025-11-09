@@ -46,7 +46,7 @@ function App() {
           <img
             src="/images/white-waves.jpg"
             alt=""
-            className="h-2 w-full object-cover rounded-lg"
+            className="h-2 w-full hidden md:block object-cover rounded-lg"
           />
           <Quote />
         </div>

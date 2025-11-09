@@ -8,12 +8,14 @@
 /* Swipe hint positioned in the center */
 .swipe-hint {
   position: absolute;
-  top: 57%;
-  left: 80%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(200, 200, 200, 0.3);
+
   z-index: 10;
   pointer-events: none;
   animation: fadeInOut 2s ease-in-out infinite;
