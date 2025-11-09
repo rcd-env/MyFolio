@@ -70,7 +70,7 @@ function App() {
         >
           <TechStack />
         </div>
-        <div className="w-[35%] flex flex-col gap-4 justify-between">
+        <div className="w-[35%] flex flex-col gap-4">
           <div
             className={`animate-on-load ${
               isLoaded ? "animate-slide-in-top" : ""
