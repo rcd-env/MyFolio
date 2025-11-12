@@ -82,66 +82,69 @@ const Projects = () => {
   }, [hintTimer]);
 
   return (
-    <div className="p-4 border border-[#8b7355] rounded-lg bg-[#f3ece0] cursor-grab">
-      <Swiper
-        modules={[]}
-        loop={true}
-        direction={"horizontal"}
-        navigation={true}
-        spaceBetween={30}
-        slidesPerView={1}
-        className="projects-swiper"
-        onSlideChange={handleSlideChange}
-      >
-        {showHint && <div className="swipe-hint">← Swipe →</div>}
-        {projects.map((project) => (
-          <SwiperSlide key={project.title}>
-            <div className="flex flex-col justify-between">
-              {/* Image Section */}
-              <div className="shrink-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-auto max-h-[180px] object-cover border border-[#8b7355] rounded-md"
-                />
-              </div>
+    <div className="relative">
+      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
+      <div className="relative p-4 border-2 border-[#3d2817] rounded-lg bg-[#f3ece0] cursor-grab">
+        <Swiper
+          modules={[]}
+          loop={true}
+          direction={"horizontal"}
+          navigation={true}
+          spaceBetween={30}
+          slidesPerView={1}
+          className="projects-swiper"
+          onSlideChange={handleSlideChange}
+        >
+          {showHint && <div className="swipe-hint">← Swipe →</div>}
+          {projects.map((project) => (
+            <SwiperSlide key={project.title}>
+              <div className="flex flex-col justify-between">
+                {/* Image Section */}
+                <div className="shrink-0">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto max-h-[180px] object-cover border border-[#8b7355] rounded-md"
+                  />
+                </div>
 
-              {/* Content Section */}
-              <div className="mt-3 lg:mt-1">
-                <hr className="mb-2 lg:mb-1 border-[#8b7355]" />
-                <h3 className="text-xl font-semibold text-[#3d2817] mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-[#3d2817] mb-4 lg:mb-2">
-                  {project.description}
-                </p>
-              </div>
+                {/* Content Section */}
+                <div className="mt-3 lg:mt-1">
+                  <hr className="mb-2 lg:mb-1 border-[#8b7355]" />
+                  <h3 className="text-xl font-semibold text-[#3d2817] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-[#3d2817] mb-4 lg:mb-2">
+                    {project.description}
+                  </p>
+                </div>
 
-              {/* Buttons Section */}
-              <div className="flex gap-3">
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
-                >
-                  <Github size={20} />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
-                >
-                  <SquareArrowOutUpRight size={20} />
-                  <span>Live</span>
-                </a>
+                {/* Buttons Section */}
+                <div className="flex gap-3">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
+                  >
+                    <Github size={20} />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
+                  >
+                    <SquareArrowOutUpRight size={20} />
+                    <span>Live</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
