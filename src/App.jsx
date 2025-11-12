@@ -100,16 +100,16 @@ function App() {
         >
           <Links />
           <Projects />
-          <img
+          {/* <img
             src="/images/white-waves.jpg"
             alt=""
             className="h-2 w-full hidden md:block object-cover rounded-lg"
-          />
+          /> */}
           <Quote />
         </div>
       </div>
-      <hr className="my-4 md:hidden" />
-      <p className="pr-2 mb-2 text-end font-mono text-md md:hidden">
+      <hr className="my-4 md:hidden border-[#8b7355]" />
+      <p className="pr-2 mb-2 text-end font-mono text-md md:hidden text-[#3d2817]">
         peace out.
       </p>
     </div>

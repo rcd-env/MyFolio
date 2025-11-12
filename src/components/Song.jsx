@@ -55,7 +55,7 @@ function Song() {
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-full p-2 border border-gray-500 rounded-lg bg-white cursor-grab">
+    <div className="w-full p-2 border border-[#8b7355] rounded-lg bg-[#f3ece0] cursor-grab">
       <audio ref={audioRef} src={audioSrc} />
 
       <div className="flex items-center gap-3">
@@ -64,22 +64,22 @@ function Song() {
           <img
             src={albumArt}
             alt={songTitle}
-            className="h-16 w-16 rounded-lg border border-gray-400 object-cover"
+            className="h-16 w-16 rounded-lg border border-[#8b7355] object-cover"
           />
         </div>
 
         {/* Song Info and Progress */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold truncate leading-tight">
+          <h3 className="text-sm font-semibold truncate leading-tight text-[#3d2817]">
             {songTitle}
           </h3>
-          <p className="text-xs text-gray-600 mb-1.5">{artistName}</p>
+          <p className="text-xs text-[#6b5744] mb-1.5">{artistName}</p>
 
           {/* Progress Bar */}
           <div className="space-y-0.5">
-            <div className="relative h-1 bg-gray-300 rounded-full overflow-hidden">
+            <div className="relative h-1 bg-[#d4c4b0] rounded-full overflow-hidden">
               <div
-                className="absolute h-full bg-gray-900 transition-all duration-100"
+                className="absolute h-full bg-[#5a4a3a] transition-all duration-100"
                 style={{ width: `${progress}%` }}
               />
               <input
@@ -92,7 +92,7 @@ function Song() {
               />
             </div>
             <div className="flex justify-end">
-              <span className="text-xs text-gray-600 font-mono">
+              <span className="text-xs text-[#6b5744] font-mono">
                 {formatTime(currentTime)}/{formatTime(duration)}
               </span>
             </div>
@@ -102,13 +102,13 @@ function Song() {
         {/* Play/Pause Button */}
         <button
           onClick={togglePlay}
-          className="shrink-0 h-10 w-10 flex items-center justify-center border-2 border-gray-900 rounded-full hover:bg-gray-100 transition-colors"
+          className="shrink-0 h-10 w-10 flex items-center justify-center border border-[#5a4a3a] rounded-full hover:bg-[#e8d9c3] transition-colors"
         >
           {isPlaying ? (
-            <Pause className="h-4 w-4 text-gray-900" fill="currentColor" />
+            <Pause className="h-4 w-4 text-[#3d2817]" fill="currentColor" />
           ) : (
             <Play
-              className="h-4 w-4 text-gray-900 ml-0.5"
+              className="h-4 w-4 text-[#3d2817] ml-0.5"
               fill="currentColor"
             />
           )}

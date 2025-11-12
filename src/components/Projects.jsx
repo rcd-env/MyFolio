@@ -7,6 +7,7 @@ import "./Projects.css";
 const Projects = () => {
   const [showHint, setShowHint] = useState(true);
   const [hintTimer, setHintTimer] = useState(null);
+
   const projects = [
     {
       title: "Earno",
@@ -31,13 +32,13 @@ const Projects = () => {
       githubLink: "https://github.com/rcd-env/zuno",
       demoLink: "https://zuno-sand.vercel.app/",
     },
-    {
-      title: "Foodivery",
-      description: "A full-stack food reel scrolling platform.",
-      image: "/images/foodivery.png",
-      githubLink: "https://github.com/rcd-env/foodivery",
-      demoLink: "https://lets-foodivery.vercel.app/",
-    },
+    // {
+    //   title: "Foodivery",
+    //   description: "A full-stack food reel scrolling platform.",
+    //   image: "/images/foodivery.png",
+    //   githubLink: "https://github.com/rcd-env/foodivery",
+    //   demoLink: "https://lets-foodivery.vercel.app/",
+    // },
     {
       title: "Clima Sphere",
       description: "A sleek weather app built with HTML, CSS, and JavaScript.",
@@ -63,15 +64,12 @@ const Projects = () => {
 
   const handleSlideChange = () => {
     setShowHint(false);
-
     if (hintTimer) {
       clearTimeout(hintTimer);
     }
-
     const timer = setTimeout(() => {
       setShowHint(true);
     }, 4000);
-
     setHintTimer(timer);
   };
 
@@ -84,57 +82,7 @@ const Projects = () => {
   }, [hintTimer]);
 
   return (
-    <div className="p-4 md:p-2 border border-gray-500 rounded-lg bg-white cursor-grab">
-      <Swiper
-        modules={[]}
-        loop={true}
-        direction={"vertical"}
-        speed={250}
-        navigation={true}
-        spaceBetween={10}
-        slidesPerView={1}
-        className="mySwiper vertical-swiper"
-        onSlideChange={handleSlideChange}
-      >
-        {showHint && <div className="swipe-hint vertical-hint">↕ Scroll</div>}
-        {projects.map((project) => (
-          <SwiperSlide key={project.title}>
-            <div className="flex flex-col h-full">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="border border-gray-500 rounded-md mb-2"
-              />
-              <hr />
-              <div className="flex flex-col justify-between grow">
-                <div>
-                  <p className="text-xl font-semibold mt-2">{project.title}</p>
-                  <p className="md:text-sm">{project.description}</p>
-                </div>
-                <div className="flex gap-4 mt-3">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 border border-gray-600 rounded-md flex gap-1.5 justify-around"
-                  >
-                    <Github /> GitHub
-                  </a>
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 border border-gray-600 rounded-md flex gap-1.5 justify-around"
-                  >
-                    <SquareArrowOutUpRight /> Live
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
+    <div className="p-4 border border-[#8b7355] rounded-lg bg-[#f3ece0] cursor-grab">
       <Swiper
         modules={[]}
         loop={true}
@@ -142,39 +90,52 @@ const Projects = () => {
         navigation={true}
         spaceBetween={30}
         slidesPerView={1}
-        className="mySwiper horizontal-swiper"
+        className="projects-swiper"
         onSlideChange={handleSlideChange}
       >
-        {showHint && (
-          <div className="swipe-hint horizontal-hint">← Swipe →</div>
-        )}
+        {showHint && <div className="swipe-hint">← Swipe →</div>}
         {projects.map((project) => (
           <SwiperSlide key={project.title}>
-            <div className="relative flex flex-col pb-12">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="border border-gray-500 rounded-md mb-3"
-              />
-              <hr />
-              <p className="text-xl font-semibold mt-2 mb-1">{project.title}</p>
-              <p className="md:text-sm">{project.description}</p>
-              <div className="flex gap-4 absolute bottom-0 left-0">
+            <div className="flex flex-col justify-between">
+              {/* Image Section */}
+              <div className="shrink-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-auto max-h-[180px] object-cover border border-[#8b7355] rounded-md"
+                />
+              </div>
+
+              {/* Content Section */}
+              <div className="mt-3 lg:mt-1">
+                <hr className="mb-2 lg:mb-1 border-[#8b7355]" />
+                <h3 className="text-xl font-semibold text-[#3d2817] mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-[#3d2817] mb-4 lg:mb-2">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Buttons Section */}
+              <div className="flex gap-3">
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 py-1 border border-gray-600 rounded-md flex gap-2 justify-around"
+                  className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
                 >
-                  <Github /> GitHub
+                  <Github size={20} />
+                  <span>GitHub</span>
                 </a>
                 <a
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-2 py-1 border border-gray-600 rounded-md flex gap-2 justify-around"
+                  className="px-3 py-1.5 border border-[#8b7355] rounded-md flex items-center gap-2 text-[#3d2817] hover:bg-[#e8d9c3] transition-colors text-md"
                 >
-                  <SquareArrowOutUpRight /> Live
+                  <SquareArrowOutUpRight size={20} />
+                  <span>Live</span>
                 </a>
               </div>
             </div>

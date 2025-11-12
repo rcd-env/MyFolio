@@ -31,7 +31,9 @@ function Links() {
 
   return (
     <div className="w-full justify-around items-center">
-      <p className="text-3xl font-semibold mb-2 hidden md:block">Links.</p>
+      <p className="text-3xl font-semibold mb-2 hidden md:block text-[#3d2817]">
+        Links.
+      </p>
       <div className="flex justify-evenly md:justify-between items-center">
         {links.map((link) => (
           <div key={link.name} className="relative group">
@@ -45,7 +47,7 @@ function Links() {
                     : "h-10 w-10"
                 }`}
               />
-              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-[#5a4a3a] text-[#faf4eb] text-xs rounded px-2 py-1 whitespace-nowrap">
                 {link.name}
               </span>
             </a>

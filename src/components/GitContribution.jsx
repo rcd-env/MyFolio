@@ -2,8 +2,8 @@ import GitHubCalendar from "react-github-calendar";
 
 const GitContribution = () => {
   return (
-    <div className="w-full p-4 border border-gray-500 rounded-lg bg-white cursor-grab">
-      <p className="text-md font-semibold mb-2">rat race</p>
+    <div className="w-full p-4 border border-[#8b7355] rounded-lg bg-[#f3ece0] cursor-grab">
+      <p className="text-md font-semibold mb-2 text-[#3d2817]">rat race</p>
       <div className="hidden lg:block">
         <GitHubCalendar
           username="rcd-env"

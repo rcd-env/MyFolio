@@ -3,6 +3,22 @@
 * {
   font-family: "Space Grotesk", sans-serif;
 }
+
+/* Newspaper Theme */
+:root {
+  --newspaper-bg: #f5e6d3;
+  --newspaper-card-bg: #f3ece0;
+  --newspaper-text: #3d2817;
+  --newspaper-text-secondary: #6b5744;
+  --newspaper-border: #8b7355;
+  --newspaper-accent: #5a4a3a;
+}
+
+body {
+  background-color: var(--newspaper-bg);
+  color: var(--newspaper-text);
+}
+
 /* .main {
   background-image: url("../public/images/bg.jpeg");
   background-size: cover;

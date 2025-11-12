@@ -1,5 +1,6 @@
 /* Swiper Container Size Control */
-.mySwiper {
+.mySwiper,
+.projects-swiper {
   width: 100%;
   height: auto;
   position: relative;
@@ -13,8 +14,8 @@
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: 500;
-  color: white;
-  background: rgb(0, 0, 0, 0.5);
+  color: #faf4eb;
+  background: rgba(58, 74, 90, 0.7);
   z-index: 10;
   pointer-events: none;
   animation: fadeInOut 2s ease-in-out infinite;
@@ -37,95 +38,47 @@
   }
 }
 
-/* Vertical Swiper for Mobile - Set height based on content */
-.vertical-swiper {
-  height: 500px;
+/* Projects swiper */
+.projects-swiper {
   display: block;
   cursor: grab;
+  height: auto;
 }
 
-.vertical-swiper:active {
+.projects-swiper:active {
   cursor: grabbing;
 }
 
-/* Adjust for smaller mobile screens */
-@media (max-width: 480px) {
-  .vertical-swiper {
-    height: 21rem;
-  }
+.projects-swiper .swiper-wrapper {
+  height: auto;
 }
 
-/* Hide vertical swiper on desktop */
-@media (min-width: 768px) {
-  .vertical-swiper {
-    display: none !important;
-  }
-}
-
-/* Horizontal swiper */
-.horizontal-swiper {
-  display: none;
-  cursor: grab;
-  height: 100%;
-}
-
-.horizontal-swiper:active {
-  cursor: grabbing;
-}
-
-.horizontal-swiper .swiper-wrapper {
-  height: 100%;
-  padding-bottom: 0;
-}
-
-.horizontal-swiper .swiper-slide {
-  height: 100%;
+.projects-swiper .swiper-slide {
+  height: auto !important;
   display: flex !important;
-}
-
-.horizontal-swiper .swiper-slide > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Show horizontal swiper on desktop */
-@media (min-width: 768px) {
-  .horizontal-swiper {
-    display: block !important;
-  }
-
-  /* Override the generic swiper-slide height rule for horizontal swiper */
-  .horizontal-swiper .swiper-slide {
-    height: 100% !important;
-  }
-}
-
-.mySwiper .swiper-wrapper {
-  height: auto;
-}
-
-.vertical-swiper .swiper-slide {
-  height: auto;
-  display: flex;
-  align-items: stretch;
 }
 
 /* Swiper Navigation Button Styles */
 .mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
-  color: black;
+.mySwiper .swiper-button-prev,
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  color: #3d2817;
 }
 
 /* Optional: Adjust button size */
 .mySwiper .swiper-button-next::after,
-.mySwiper .swiper-button-prev::after {
+.mySwiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
   font-size: 24px;
   font-weight: bold;
 }
 
 /* Optional: Add hover effect */
 .mySwiper .swiper-button-next:hover,
-.mySwiper .swiper-button-prev:hover {
-  color: #333;
+.mySwiper .swiper-button-prev:hover,
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  color: #5a4a3a;
 }
