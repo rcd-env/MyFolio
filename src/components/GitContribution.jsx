@@ -7,7 +7,7 @@ const GitContribution = () => {
 
   return (
     <div className="w-full relative">
-      <div className="absolute inset-0 bg-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
+      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
       <div className="relative w-full p-4 border-2 border-[#3d2817] rounded-lg bg-[#f3ece0] cursor-grab">
         <p className="text-md font-semibold mb-2 text-[#3d2817]">rat race</p>
         <div className="hidden lg:block">
