@@ -7,7 +7,7 @@ function Quote() {
         “I am gonna be hokage someday.”
       </p>
       <div className="relative">
-        <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-lg"></div>
+        <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-xl"></div>
         <img
           src="/images/hokage.jpeg"
           alt=""
