@@ -51,9 +51,9 @@ function DailyToolStack() {
           </div>
           <div className="h-full w-1/2">
             <img
-              src="/images/white-waves.jpg"
+              src="/images/checker.jpeg"
               alt="drago"
-              className="h-full w-full rounded-lg object-cover"
+              className="h-full w-full rounded-lg object-cover blur-[1px]"
             />
           </div>
         </div>
