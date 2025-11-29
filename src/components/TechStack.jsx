@@ -28,7 +28,7 @@ function TechStack() {
 
   return (
     <div className="h-full relative">
-      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
+      <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-xl"></div>
       <div className="relative h-full p-6 border-2 border-[#3d2817] rounded-lg bg-[#f3ece0] cursor-grab">
         <div className="flex gap-4 mb-2 text-7xl items-center">
           <Braces size={54} className="text-[#3d2817]" />{" "}

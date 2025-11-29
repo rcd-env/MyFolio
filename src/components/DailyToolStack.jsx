@@ -11,7 +11,7 @@ function DailyToolStack() {
   ];
   return (
     <div className="h-full relative">
-      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
+      <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-xl"></div>
       <div className="relative h-full p-4 border-2 border-[#3d2817] rounded-lg bg-[#f3ece0] flex flex-col gap-2 cursor-grab">
         <div>
           <p className="text-2xl font-bold text-[#3d2817]">DAILY</p>

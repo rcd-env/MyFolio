@@ -3,14 +3,17 @@ import React from "react";
 function Quote() {
   return (
     <div className="w-full flex flex-col gap-1 mt-auto cursor-grab">
-      <img
-        src="/images/shy.jpg"
-        alt=""
-        className="h-full w-full border border-[#3d2817] rounded-lg"
-      />
-      <p className="mr-auto text-lg italic text-[#3d2817]">
-        ~ Hire me, Please.
+      <p className="text-center text-md font-semibold mb-1 italic text-[#3d2817]">
+        “I am gonna be hokage someday.”
       </p>
+      <div className="relative">
+        <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-lg"></div>
+        <img
+          src="/images/hokage.jpeg"
+          alt=""
+          className="relative h-full w-full border-2 border-[#3d2817] rounded-lg"
+        />
+      </div>
     </div>
   );
 }

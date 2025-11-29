@@ -2,6 +2,10 @@
 
 * {
   font-family: "Space Grotesk", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Newspaper Theme */

@@ -26,7 +26,7 @@ function Info() {
 
   return (
     <div className="w-full relative">
-      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-md translate-x-1 translate-y-1"></div>
+      <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-lg"></div>
       <div className="relative w-full p-4 border-2 border-[#3d2817] rounded-md bg-[#f3ece0] flex flex-col gap-2 cursor-grab">
         <div className="flex gap-2 items-center">
           <img
@@ -52,7 +52,7 @@ function Info() {
         </div>
         <div className="flex mt-3 justify-between items-center leading-5">
           <p className="text-[#6b5744]">
-            "How to center <br />a div again??"
+            “How to center <br />a div again??”
           </p>
           <div>
             <div className="flex gap-1 items-center">

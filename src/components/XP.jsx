@@ -48,7 +48,7 @@ function XP() {
     //   ))}
     // </div>
     <div className="h-40 relative">
-      <div className="absolute inset-0 border-2 border-[#3d2817] rounded-lg translate-x-1 translate-y-1"></div>
+      <div className="absolute -inset-1 border-2 border-[#3d2817] rounded-xl"></div>
       <div className="relative h-40 border-2 border-[#3d2817] rounded-lg bg-[#f3ece0] flex items-center justify-center cursor-grab text-[#3d2817]">
         aura coming soon...
       </div>
